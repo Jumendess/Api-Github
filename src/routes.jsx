@@ -1,12 +1,16 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+// routes.jsx
+import React from 'react';
+import { Route, Routes } from 'react-router-dom'; // Importe Routes
+import RepositoriesPage from './pages/RepositoriesPage';
+import MainPage from './pages/MainPage';
 
-import MainPage from "./pages/Main";
-
-export function AppRoutes() {
+function AppRoutes() {
   return (
     <Routes>
+      <Route path="/repositories" element={<RepositoriesPage />} />
       <Route path="/" element={<MainPage />} />
     </Routes>
   );
 }
+
+export default AppRoutes;
